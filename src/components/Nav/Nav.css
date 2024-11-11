@@ -1,0 +1,12 @@
+.navLinkShape{
+  width: 90px;
+  height: 0px;
+  background-color: #D67840;
+  border-radius: 100px 500px 1000px 1000px;
+  top: 0;
+  left: 3px;
+}
+.navLink:hover .navLinkShape{
+  opacity: 1;
+  height: 80px;
+}

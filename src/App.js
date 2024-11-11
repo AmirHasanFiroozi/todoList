@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { createContext , useEffect, useState } from 'react';
 import './App.css';
+import Home from './components/Home/Home';
+
+export const Them = createContext();
+export const AllTodo = createContext();
 
 function App() {
+  let [themToggles , setThemToggle] = useState('light');
+  let [allTodo , setAllTodo] = useState([]);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = themToggles === 'light' ? "#3e68a3" : '#2f4156';
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AllTodo.Provider value={[allTodo , setAllTodo]}>
+    <Them.Provider value={[themToggles,setThemToggle]}>
+     <Home />
+     </Them.Provider>
+    </AllTodo.Provider>
+
   );
 }
 

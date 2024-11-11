@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'sourGummy';
+    src:local('SourGummy'),local('Sour-Gummy'),local('Sour Gummy'),
+    url('./SourGummy-VariableFont_wdth\,wght.ttf') format('truetype'),
+    url('./SourGummy-Black.woff') format('woff'),
+    url('./SourGummy-Black.woff2') format('woff2');
+    font-style: normal;
+    font-weight: bold;
+}
